@@ -11,11 +11,37 @@
         
         <div class="form-box">
              <h2>Login Form</h2>
-            <input type="text" placeholder="username" >
-            <input type="password" placeholder="password" id="pswrd">
+            <input type="text" placeholder="username" class="input1" >
+           <div class="eye-input"> <input type="password" placeholder="password" id="pswrd" class="input1">
+             <img src="./images/hidden-img.png" class="eye-icon" id="eye" onclick="eyeviewhandle()"></div>
+      
+              <button type="reset">login</button> </div>
            
-        </div> <img src="./images/hidden-img.png" class="eye-icon">
+       
     </div>
+
+    <script>
+
+        function eyeviewhandle(){
+        const inputpasswrd =document.getElementById("pswrd");
+        const eyeimg = document.getElementById("eye");
+
+       
+       
+
+            if(inputpasswrd.type === "password"){
+                inputpasswrd.type = "text";
+                eyeimg.src ="./images/view-img.png"
+                
+            }
+
+            else{
+                inputpasswrd.type ="password";
+                eyeimg.src ="./images/hidden-img.png"
+            }
+
+        }
+    </script>
     
 </body>
 </html>
